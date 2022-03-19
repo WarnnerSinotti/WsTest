@@ -16,4 +16,5 @@
 
 06 - O relatório automático vai abrir uma url local, só atualizar a page!
 
+07 - A estrutura de encontrar os elementos, pode estar dentro ou fora das pageobjects, no meu caso, deixei em buttons, apenas para modificar meu projeto, kkk
 
