@@ -14,5 +14,6 @@
       allure generate --clean
       allure open
 
+06 - O relatório automático vai abrir uma url local, só atualizar a page!
 
 
