@@ -1,4 +1,6 @@
-import { printError } from "./config/Capabilities";
+import { printError } from "../config/Capabilities";
+
+import {report} from "../config/Capabilities";
 
 const allure = require('allure-commandline');
 
@@ -9,8 +11,17 @@ export const config: WebdriverIO.Config = {
     // GERAR RELATÓRIO ALLURE AUTOMATICO APÓS TESTES
     // ===================================================
     //
-    /*onComplete: function() {
-    
+    onComplete: function() {
+
+        const Report = report.allureReport
+
+        if (Report){
+
+        console.log('==============================================')
+        console.log('====Agora, Vai gerar aquele Relatório !!!!====')
+        console.log('Obrigado por este Desafio :) - Warnner Sinotti')
+        console.log('==============================================')
+        
         const reportError = new Error('Could not generate Allure report')
         const generation = allure(['generate', 'allure-results', '--clean'])
         const open = allure(['open'])
@@ -18,21 +29,30 @@ export const config: WebdriverIO.Config = {
         return new Promise((resolve, reject) => {
             const generationTimeout = setTimeout(
                 () => reject(reportError),
-                15000)
+                20000)
 
             generation.on('exit', async function(exitCode:any) {
                 await clearTimeout(generationTimeout)
                 await open();
-
+                
                 if (exitCode !== 0) {
                     return reject(reportError)
                 }
 
                 console.log('Allure report successfully generated')
+                
                 resolve(allure)
             })
         })
-    }, */
+
+        } else {
+        console.log('==============================================')
+        console.log('Ops, Não terá aquele Relatório automático, mas')
+        console.log('Obrigado por este Desafio :) - Warnner Sinotti')
+        console.log('==============================================')
+        }
+        
+    }, 
     //
     // ====================
     // Runner Configuration
@@ -57,7 +77,7 @@ export const config: WebdriverIO.Config = {
     // Inspecionando o Local
     // POR PADRÃO *
     specs: [
-        './features/Teste01.feature',
+        './features/Teste02.feature',
 
     ],
     // Patterns to exclude.
@@ -210,7 +230,7 @@ export const config: WebdriverIO.Config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/Teste01.ts'],
+        require: ['./features/step-definitions/Teste02.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

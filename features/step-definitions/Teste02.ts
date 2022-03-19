@@ -3,7 +3,7 @@ import { Given, When, Then } from '@wdio/cucumber-framework';
 import { BrowseButton, ListNavegation, PageList25, SearchButton, SearchInsert, SelectCategory,} from '../pageobjects/IndexPage';
 import { urlOpenTrivia } from '../pageobjects/UrlPage';
 
-Given(/^que navego para a pagina de busca do banco de questoes (.+)$/, async (Account) => {
+Given(/^que navego para a pagina de busca do banco de questoes (.+)$/, async (url) => {
     await urlOpenTrivia();
     
 });

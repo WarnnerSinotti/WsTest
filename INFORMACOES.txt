@@ -1,0 +1,18 @@
+01 - Utilizo o Env para mudar o ambiente de teste, url de homologação ou Produção.
+
+02 - Executar testes no terminal
+
+      npm run teste01  
+      npm run teste02
+      npm run teste03
+
+03 - Quando ocorrer erro no teste, terá um Screenshot na pasta img
+
+04 - Pasta Config possui alguns pequenos ajustes
+
+05 - se desativar o relatório em item 04, para gerar o relatório após todos os testes, usar seguinte comando no terminal
+      allure generate --clean
+      allure open
+
+
+

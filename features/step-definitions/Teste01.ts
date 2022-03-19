@@ -4,7 +4,7 @@ import { BrowseButton, GetText, SearchButton, SearchInsert } from '../pageobject
 import { urlOpenTrivia } from '../pageobjects/UrlPage';
 
 
-Given(/^que navego para a pagina de busca do banco de questoes (.+)$/, async (Account) => {
+Given(/^que navego para a pagina de busca do banco de questoes (.+)$/, async (url) => {
     await urlOpenTrivia();
     await BrowseButton();
     

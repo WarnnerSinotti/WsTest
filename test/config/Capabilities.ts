@@ -1,3 +1,13 @@
+// CONFIGURAR RELATÓRIO
+export const report={
+  allureReport: true
+}
+
+//Maximizar Tela
+export const resolution={
+  maximizeWindow: true
+}
+
 // CONFIGURAÇÃO DE TEMPO - WEBSITE
 export const config = {
   timeout: 60000, //TEMPO DE RESPOSTA DO ELEMENTO

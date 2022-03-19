@@ -1,10 +1,10 @@
 Feature: Busca no Banco de Questões
   Scenario Outline: Busca por questão por categoria
 
-    Given Acesso Page Open Trivia <Account>
+    Given Acesso Page <url>
     When Clico em todos os buttons <>
-    Then Pagina Sucesso <>
+    Then Confirmo URL Pagina <>
 
-    Examples:
-      | Account |
-      | 01      |
+      Examples:
+      | url         |
+      | Open Trivia |
